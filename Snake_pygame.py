@@ -40,7 +40,7 @@ key_direction = {
     pygame.K_UP: 'UP',
     pygame.K_DOWN: 'DOWN',
     pygame.K_LEFT: 'LEFT',
-    pygame.K_RIGHT: 'RIGHT',
+    pygame.K_RIGHT: 'RIGHT'
 }
 
 
@@ -65,7 +65,7 @@ class Apple:
 #10. 뱀 클래스 만들기
 class Snake:
     def __init__(self):
-        self.positions = [(5,5),(4,5),(3,5)]  # 뱀의 위치
+        self.positions = [(10,10),(9,10),(8,10)]  # 뱀의 위치
         self.direction = ''
  
     def draw(self):
@@ -112,7 +112,8 @@ game_result = 'Game Over'
 #14. 게임 폰트 정의
 game_font = pygame.font.Font(None, 60)
 
-#14. 게임 무한루프
+
+#15. 게임 무한루프
 running = True
 while running:
     clock.tick(20)
@@ -146,10 +147,6 @@ while running:
     if x_position<0 or x_position>19 or y_position<0 or y_position>19 or snake.positions[0] in snake.positions[1:]:
         death_sound.play()
         running = False
-
-
-
-
 
 
  
